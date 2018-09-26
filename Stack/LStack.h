@@ -41,10 +41,11 @@ public:
 		size = 0;
 	}
 
-	void push(const T& it)
+	LStack<T>& push(const T& it)
 	{
 		top = new Link<T>(it, top);
 		size++;
+		return *this;
 	}
 
 	T pop()

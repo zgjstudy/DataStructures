@@ -36,10 +36,11 @@ public:
 		top = 0;
 	}
 
-	void push(const T& it)
+	AStack<T>& push(const T& it)
 	{
 		Assert(top != maxSize, "Stack is full");
 		listArray[top++] = it;
+		return *this;
 	}
 
 	T pop()

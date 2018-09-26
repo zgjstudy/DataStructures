@@ -20,7 +20,7 @@ public:
 
 	virtual void clear() = 0;
 
-	virtual void push(const T& it) = 0;
+	virtual Stack<T>& push(const T& it) = 0;
 
 	virtual T pop() = 0;
 

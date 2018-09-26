@@ -28,4 +28,9 @@
       <Filter>作业相关内容</Filter>
     </ClInclude>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="useStackToPerformFibonacci.cpp">
+      <Filter>作业相关内容</Filter>
+    </ClCompile>
+  </ItemGroup>
 </Project>

@@ -120,6 +120,9 @@
     <ClInclude Include="AQueue.h" />
     <ClInclude Include="LList.h" />
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="useStackToPerformFibonacci.cpp" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

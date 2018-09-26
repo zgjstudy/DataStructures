@@ -17,7 +17,7 @@ private:
 	int front;
 	int rear;
 	T* listArray;
-	bool isEmpty;
+	bool isEmpty;					//为空标志
 	static const int defaultSize = 10;
 
 public:
@@ -44,27 +44,29 @@ public:
 
 	void enqueue(const T& it)
 	{
-		Assert(((rear + 1) % maxSize) != front, "Queue is full");
+		Assert(isEmpty || ((rear + 1) % maxSize) != front, "Queue is full");//判断是否满队
 		rear = (rear + 1) % maxSize;
 		listArray[rear] = it;
 	}
 
 	T dequeue()
 	{
-		Assert(length() != 0, "Queue is empty");
+		Assert(isEmpty, "Queue is empty");	//判断是否空队
 		T it = listArray[front];
 		front = (front + 1) % maxSize;
+		if (((rear + 1) % maxSize) != front)
+			isEmpty = 1;
 		return it;
 	}
 
-	//const T& frontValue() const
-	//{
-	//	Assert(length() != 0, "Queue is empty");
-	//	return listArray[front];
-	//}
+	const T& frontValue() const
+	{
+		Assert(isEmpty, "Queue is empty");	//判断是否空队
+		return listArray[front];
+	}
 
-	//virtual int length() const
-	//{
-	//	return (rear - front + 1) % maxSize;
-	//}
+	virtual int length() const
+	{
+		return (rear - front + 1) % maxSize;
+	}
 };
