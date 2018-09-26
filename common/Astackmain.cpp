@@ -7,7 +7,7 @@
 
 #include "book.h"
 
-#include "astack.h"
+#include "../Stack/AStack.h"
 
 #include "StackTest.h"
 
@@ -22,5 +22,8 @@ int main(int argc, char** argv) {
 
   StackTest<Int>(S1);
   StackTest<int>(S3);
+
+  system("pause");
+
   return 0;
 }

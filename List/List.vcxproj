@@ -124,7 +124,7 @@
     <ClInclude Include="LList.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Llistmain.cpp" />
+    <ClCompile Include="..\common\Alistmain.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
