@@ -5,7 +5,7 @@
 
 // A collection of various macros, constants, and small functions
 // used for the software examples.
-
+#pragma once
 // First, include all the standard headers that we need
 #include <iostream>
 #include <cstdlib>
