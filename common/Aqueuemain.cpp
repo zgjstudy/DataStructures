@@ -7,7 +7,7 @@
 
 #include "book.h"
 
-#include "aqueue.h"
+#include "../Queue/AQueue.h"
 
 #include "QueueTest.h"
 
@@ -22,5 +22,8 @@ int main(int argc, char** argv) {
 
   QueueTest<Int>(S1);
   QueueTest<int>(S3);
+
+  system("pause");
+
   return 0;
 }
