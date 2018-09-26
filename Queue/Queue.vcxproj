@@ -115,13 +115,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\common\Aqueuemain.cpp" />
-  </ItemGroup>
-  <ItemGroup>
     <ClInclude Include="..\common\book.h" />
     <ClInclude Include="..\common\QueueTest.h" />
     <ClInclude Include="AQueue.h" />
+    <ClInclude Include="LQueue.h" />
     <ClInclude Include="Queue.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\common\Lqueuemain.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

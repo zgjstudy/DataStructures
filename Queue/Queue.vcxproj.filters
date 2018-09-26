@@ -15,11 +15,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\common\Aqueuemain.cpp">
-      <Filter>测试文件</Filter>
-    </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
     <ClInclude Include="..\common\book.h">
       <Filter>依赖项</Filter>
     </ClInclude>
@@ -32,5 +27,13 @@
     <ClInclude Include="AQueue.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="LQueue.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\common\Lqueuemain.cpp">
+      <Filter>测试文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
