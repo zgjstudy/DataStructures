@@ -68,5 +68,8 @@ int main()
   temp2 = new LeafNode(string2);
   root = new IntlNode('+', temp1, temp2);
   traverse(root);
+
+  system("pause");
+
   return 0;
 }
