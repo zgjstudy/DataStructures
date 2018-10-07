@@ -36,9 +36,12 @@
     <ClInclude Include="LinkWithFL.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="dLinkWithFL.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\common\Alistmain.cpp">
+    <ClCompile Include="..\common\Dlistmain.cpp">
       <Filter>测试文件</Filter>
     </ClCompile>
   </ItemGroup>

@@ -119,12 +119,13 @@
     <ClInclude Include="..\common\compare.h" />
     <ClInclude Include="..\common\ListTest.h" />
     <ClInclude Include="AList.h" />
+    <ClInclude Include="dLinkWithFL.h" />
     <ClInclude Include="List.h" />
     <ClInclude Include="LinkWithFL.h" />
     <ClInclude Include="LList.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\common\Alistmain.cpp" />
+    <ClCompile Include="..\common\Dlistmain.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

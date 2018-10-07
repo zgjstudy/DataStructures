@@ -11,7 +11,7 @@
 #include "compare.h"
 
 // Include doubly linked node implementation
-#include "dlinkFL.h"
+#include "../List/dLinkWithFL.h"
 
 // Include doubly linked list implementation
 #include "dlist.h"
@@ -28,5 +28,8 @@ int main(int argc, char** argv) {
   LList<Int> L3;
 
   ListTest<Int*, Int, LList<int> >(L1, L2, L3);
+
+  system("pause");
+
   return 0;
 }
