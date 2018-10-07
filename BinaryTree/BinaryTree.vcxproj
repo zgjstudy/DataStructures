@@ -115,8 +115,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="..\common\BST.h" />
     <ClInclude Include="BinNode.h" />
     <ClInclude Include="BSTNode.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\common\BSTmain.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
