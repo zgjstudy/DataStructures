@@ -108,5 +108,8 @@ int main()
     cout << temp << " ";
   }
   cout << "\n";
+
+  system("Pause");
+
   return 0;
 }

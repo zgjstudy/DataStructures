@@ -6,10 +6,10 @@
 // This file includes all of the pieces of the BST implementation
 
 // Include the node implementation
-#include "BSTNode.h"
+#include "../BinaryTree/BSTNode.h"
 
 // Include the dictionary ADT
-#include "dictionary.h"
+#include "../Dictionary/Dictionary.h"
 
 // Binary Search Tree implementation for the Dictionary ADT
 template <typename Key, typename E>
