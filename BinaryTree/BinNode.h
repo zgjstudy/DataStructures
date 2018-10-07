@@ -2,10 +2,30 @@
 *
 *	数据结构
 *	Binary Tree Node 抽象类
-*	9.29
+*	10.7
 *
 */
 
 
 #pragma once
 
+template <typename E>
+class BinNode
+{
+public:
+	virtual ~BinNode() {}
+
+	virtual E& element() = 0;
+
+	virtual void setElement(const E&) = 0;
+
+	virtual BinNode* left() const = 0;
+
+	virtual void setLeft(BinNode*) = 0;
+
+	virtual BinNode* right() const = 0;
+
+	virtual void setRight(BinNode*) = 0;
+
+	virtual bool isLeaf() = 0;
+};
