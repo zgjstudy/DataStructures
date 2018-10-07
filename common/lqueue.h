@@ -29,6 +29,7 @@ public:
   void clear() {           // Clear queue
     while(front->next != NULL) { // Delete each link node
       rear = front;
+	  front = front->next;
       delete rear;
     }
     rear = front;
