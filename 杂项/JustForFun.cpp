@@ -4,14 +4,14 @@ using namespace std;
 
 int main()
 {
-	char p[8];
-	char* cp = new char[8];
+	char p[56];
+	char* cp = new char[56];
 
-	p[7] = 0;
-	cp[7] = 0;
+	p[55] = 0;
+	cp[55] = 0;
 	
 	cout << p << endl << cp << endl;
-
+	cout << "����������������" << endl;
 	system("pause");
 
 	return 0;

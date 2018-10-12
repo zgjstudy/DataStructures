@@ -42,17 +42,11 @@ public:
 	// Insert "it" at current position
 	void insert(const T& it)
 	{
-		if (listSize < maxSize)				//±ß½ç¼ì²é
-		{
+		Assert(listSize < maxSize, "List capacity exceeded");
 			for (int i = listSize; i > curr; --i)
 				listArray[i] = listArray[i - 1];
 			listArray[curr] = it;
 			listSize++;
-		}
-		else
-		{
-			throw "List capacity exceeded";
-		}
 	}
 
 	// Append an element at the end of the list.
