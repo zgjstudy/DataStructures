@@ -119,6 +119,7 @@
     <ClInclude Include="dLinkWithFreeList.h" />
     <ClInclude Include="List.h" />
     <ClInclude Include="LList.h" />
+    <ClInclude Include="runtime.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

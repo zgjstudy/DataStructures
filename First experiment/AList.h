@@ -51,7 +51,7 @@ public:
 	}
 
 	// Append an element at the end of the list.
-	void append(const T& it)				//±ß½ç¼ì²é
+	void append(const T& it)
 	{
 		Assert(_size < _maxSize, "List capacity exceeded");
 		_listArray[_size++] = it;

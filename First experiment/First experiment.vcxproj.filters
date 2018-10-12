@@ -9,7 +9,7 @@
       <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
       <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
     </Filter>
-    <Filter Include="资源文件">
+    <Filter Include="依赖项">
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
@@ -26,6 +26,9 @@
     </ClInclude>
     <ClInclude Include="LList.h">
       <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="runtime.h">
+      <Filter>依赖项</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
