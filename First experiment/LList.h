@@ -15,138 +15,62 @@ template <typename T>
 class LList : public List<T>
 {
 private:
-	Link<T>* head;
-	Link<T>* tail;
-	Link<T>* curr;
-	int count;
+	Link<T>* header;	//头哨兵
+	Link<T>* tailer;	//尾哨兵
+	Link<T>* curr;		//当前节点
+	int size;			//规模
 
-	void init()
-	{
-		curr = tail = head = new Link<T>;
-		count = 0;
-	}
+protected:
+	void init();
 
-	void removeAll()
-	{
-		while (head != nullptr)
-		{
-			curr = head;
-			head = head->next;
-			delete curr;
-		}
-	}
+	void removeAll();
 
 public:
-	LList(int size = defaultSize)
-	{
-		init();
-	}
+	LList(int size = DefaultSize);
 
-	~LList()
-	{
-		removeAll();
-	}
+	~LList();
 
-	void clear()
-	{
-		removeAll();
-		init();
-	}
+	//clear
+	void clear();
 
-	void insert(const T& it)
-	{
-		curr->next = new Link<T>(it, curr->next);
-		if (tail == curr)
-		{
-			tail = curr->next;
-		}
-		count++;
-	}
+	//move to start
+	void moveToStart();
 
-	void append(const T& it)
-	{
-		tail->next = new Link<T>(it, nullptr);
-		tail = tail->next;
-		count++;
-	}
+	//move to end
+	void moveToEnd();
 
-	T remove()
-	{
-		Assert(curr->next != nullptr, "No element");
-		T it = curr->next->element;
-		Link<T>* temp = curr->next;
-		if (tail == curr->next)
-		{
-			tail = curr;
-		}
-		curr->next = curr->next->next;
-		delete temp;
-		count--;
+	//curr point to predecessor
+	void pred();
 
-		return it;
-	}
+	//curr point to successor
+	void succ();
 
-	void moveToStart()
-	{
-		curr = head;
-	}
+	//insert as successor
+	void insert(const T&);
 
-	void moveToEnd()
-	{
-		curr = tail;
-	}
+	//insert as predecessor
+	void insertAsPred(const T&);
 
-	void pred()
-	{
-		if (curr == head)
-			return;
-		Link<T>* temp = head;
-		while (temp->next != curr)
-		{
-			temp = temp->next;
-		}
-		curr = temp;
-	}
+	//insert as last
+	void append(const T&);
 
-	void succ()
-	{
-		if (curr != tail)
-		{
-			curr = curr->next;
-		}
-	}
+	//insert as first
+	void insertAsFirst(const T&);
 
-	int length() const
-	{
-		return count;
-	}
+	//remove curr node, then curr point to successor
+	//return curr->element
+	T remove();
 
-	int currPos() const
-	{
-		int i = 0;
-		Link<T>* temp = head;
-		while (temp != curr)
-		{
-			i++;
-			temp = temp->next;
-		}
-		return i;
-	}
+	//remove pth node
+	T remove(int p);
 
-	void moveToPos(int pos)
-	{
-		Assert(pos >= 0 && pos <= count, "Position out of range");
-		curr = head;
-		for (int i = 0; i < pos; ++i)
-		{
-			curr = curr->next;
-		}
-	}
+	virtual void length() const;
 
-	const T& getValue() const
-	{
-		Assert(curr->next != nullptr, "No value");
-		return curr->next->element;
-	}
+	virtual int currPos() const;
+
+	virtual void moveToPos(int pos);
+
+	virtual const T& getValue() const;
+
 };
 
