@@ -16,10 +16,10 @@ void permute(E A[], int n) {
 #include "compare.h"
 
 // Implementation for heap
-#include "heap.h"
+#include "../Heap/Heap.h"
 
 // Test out the heap implementation -- with max heap
-int main(int argc, char** argv) {
+int main(int argc = 2, char** argv = {}) {
   int i, j;
   int n;
   Int* A[20];
@@ -28,12 +28,7 @@ int main(int argc, char** argv) {
   heap<Int*, maxIntsCompare> BH(B, 0, 20);
   heap<Int, maxIntCompare> Test(C, 10, 10);
 
-  if (argc != 2) {
-    cout << "Usage: heap <heapsize>\n";
-    exit(-1);
-  }
-
-  n = atoi(argv[1]);
+  n = 15;
   if (n > 20) {
     cout << "heap size " << n << " too big.\n";
     exit(-1);
@@ -71,7 +66,7 @@ int main(int argc, char** argv) {
   }
   cout << "\n\n";
 
-  AHval = AH.removefirst();
+  AHval = AH.remove();
   cout << "Max value: " << AHval << "\n";
 
   for (i=0; i<AH.size(); i++) {
@@ -80,7 +75,7 @@ int main(int argc, char** argv) {
   }
   cout << "\n\n";
 
-  AHval = AH.removefirst();
+  AHval = AH.remove();
   cout << "Max value: " << AHval << "\n";
 
   for (i=0; i<AH.size(); i++) {
@@ -89,8 +84,6 @@ int main(int argc, char** argv) {
   }
   cout << "\n\n";
 
-  AHval = AH.remove(2);
-  cout << "Remove value: " << AHval << "\n";
 
   for (i=0; i<AH.size(); i++) {
     cout << A[i] << "  ";
@@ -104,11 +97,13 @@ int main(int argc, char** argv) {
 
   Int Testval;
   for (j=0; j<10; j++) {
-    Testval = Test.removefirst();
+    Testval = Test.remove();
     for (i=0; i<10; i++)
       cout << C[i] << "  ";
     cout << "\n";
   }
+
+  system("pause");
 
   return 0;
 }

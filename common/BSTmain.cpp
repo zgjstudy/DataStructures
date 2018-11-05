@@ -103,10 +103,10 @@ int main()
   tree.print();
   cout << "Start:\n";
   Int* temp;
-  while (tree.size() > 0) {
-    temp = tree.removeAny();
-    cout << temp << " ";
-  }
+  //while (tree.size() > 0) {
+  //  temp = tree.removeAny();
+  //  cout << temp << " ";
+  //}
   cout << "\n";
 
   system("Pause");

@@ -15,22 +15,10 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="BinNode.h">
+    <ClInclude Include="Heap.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="BSTNode.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="..\common\BST.h">
-      <Filter>依赖项</Filter>
-    </ClInclude>
-    <ClInclude Include="BST.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="Dictionary.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="Node.h">
+    <ClInclude Include="HuffmanTree.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

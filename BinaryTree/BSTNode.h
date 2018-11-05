@@ -1,53 +1,45 @@
 /*
 *
-*	数据结构
-*	基于指针的二叉树实现
-*	10.7
+*	数据结构第二次实验课
+*	BST节点类
+*	10.26 张冠杰
 *
 */
 
-
 #pragma once
-#include "BinNode.h"
+#include "Node.h"
 
-template <typename Key, typename E>
-class BSTNode : public BinNode<E>
+template <typename KEY, typename T> class BSTNode : public BinNode<T>
 {
 private:
-	Key k;
-	E it;
-	BSTNode* lc;	//left child
-	BSTNode* rc;
+	KEY		_key;
+	T		_value;
+	BSTNode *_lc;
+	BSTNode *_rc;
 
 public:
 	BSTNode()
-	{
-		lc = rc = nullptr;
-	}
+		:_rc(nullptr), _lc(nullptr) {}
 
-	BSTNode(Key K, E e, BSTNode* l = nullptr, BSTNode* r = nullptr)
-	{
-		k = K;
-		it = e;
-		lc = l;
-		rc = r;
-	}
+	BSTNode(KEY K, T e, BSTNode* l = nullptr, BSTNode* r = nullptr)
+		:_key(K), _value(e), _lc(l), _rc(r) {}
 
 	~BSTNode() {};
 
-	E& element() { return it; }
-	void setElement(const E& e) { it = e; }
+	T& element() { return _value; }
+	void setElement(const T& e) { _value = e; }
 
-	Key& key() { return k; }
-	void setKey(const Key& K) { k = K; }
+	KEY& key() { return _key; }
+	void setKey(const KEY& K) { _key = K; }
 
-	inline BSTNode* left() const { return lc; }
-	void setLeft(BinNode<E>* b) { lc = (BSTNode*)b; }
-	inline BSTNode* right() const { return rc; }
-	void setRight(BinNode<E>* b) { rc = (BSTNode*)b; }
+	inline BSTNode* left() const { return _lc; }
+	void setLeft(BinNode<T>* b) { _lc = (BSTNode*)b; }
+	inline BSTNode* right() const { return _rc; }
+	void setRight(BinNode<T>* b) { _rc = (BSTNode*)b; }
 
 	bool isLeaf()
 	{
-		return (lc == nullptr) && (rc = nullptr);
+		return (_lc == nullptr) && (_rc == nullptr);
 	}
 };
+
