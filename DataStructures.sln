@@ -19,6 +19,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Dictionary", "Dictionary\Di
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Heap", "Heap\Heap.vcxproj", "{6DCA9239-04FD-4903-9C79-0A5B5679E456}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "InternalSorting", "InternalSorting\InternalSorting.vcxproj", "{63CD6666-9758-4CFB-A8E6-0576613D25D5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -91,6 +93,14 @@ Global
 		{6DCA9239-04FD-4903-9C79-0A5B5679E456}.Release|x64.Build.0 = Release|x64
 		{6DCA9239-04FD-4903-9C79-0A5B5679E456}.Release|x86.ActiveCfg = Release|Win32
 		{6DCA9239-04FD-4903-9C79-0A5B5679E456}.Release|x86.Build.0 = Release|Win32
+		{63CD6666-9758-4CFB-A8E6-0576613D25D5}.Debug|x64.ActiveCfg = Debug|x64
+		{63CD6666-9758-4CFB-A8E6-0576613D25D5}.Debug|x64.Build.0 = Debug|x64
+		{63CD6666-9758-4CFB-A8E6-0576613D25D5}.Debug|x86.ActiveCfg = Debug|Win32
+		{63CD6666-9758-4CFB-A8E6-0576613D25D5}.Debug|x86.Build.0 = Debug|Win32
+		{63CD6666-9758-4CFB-A8E6-0576613D25D5}.Release|x64.ActiveCfg = Release|x64
+		{63CD6666-9758-4CFB-A8E6-0576613D25D5}.Release|x64.Build.0 = Release|x64
+		{63CD6666-9758-4CFB-A8E6-0576613D25D5}.Release|x86.ActiveCfg = Release|Win32
+		{63CD6666-9758-4CFB-A8E6-0576613D25D5}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
